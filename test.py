@@ -1,7 +1,8 @@
 import sys
 
+print("\nThis is test.py")
 
-print("Python version:")
+print("\nPython version:")
 print(sys.version)
 
 print("\nPATH:")
