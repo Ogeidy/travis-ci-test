@@ -3,22 +3,11 @@ python:
     - "3.7"
     - "3.8"
 
-install: skip
+env:
+    - TEST=one
+    - TEST=two
 
 script:
     - python test.py
     - python test_another.py
-    - echo "Try to run test_another again " && python test_another.py
-
-# jobs:
-#     include:
-#         - name: First
-#           script:
-#             python test.py
-#         - name: Second
-#           script:
-#             python test_another.py
-#         - name: Third
-#           script:
-#             - echo "Hello world"
-#             - echo "Try to run test_another again " && python test_another.py
+    - echo "ENV - "$TEST
