@@ -6,7 +6,7 @@ python:
 env:
     - TEST=one
 
-jobs:
+matrix:
     include:
         - script: echo "First"
         - stage: Stage one
