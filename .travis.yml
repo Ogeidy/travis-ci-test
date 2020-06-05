@@ -5,9 +5,14 @@ python:
 
 env:
     - TEST=one
-    - TEST=two
-
-script:
-    - python test.py
-    - python test_another.py
-    - echo "ENV - "$TEST
+jobs:
+    include:
+        - script: echo "First"
+        - stage: Stage one
+          script: echo "Second"
+        - script: echo "Third"
+        - stage: Stage two
+          name: Fourth job
+          script: echo "Fourth"
+        - name: Stage fifth
+          script: echo "Fifth"
