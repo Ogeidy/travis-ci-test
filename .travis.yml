@@ -3,8 +3,12 @@ python:
     - "3.7"
     - "3.8"
 
-script:
-    python test.py
-
-script:
-    python test_another.py
+jobs:
+    include:
+        - script:
+            python test.py
+        - script:
+            python test_another.py
+        - script:
+            - echo "Hello world"
+            - echo "Try to run test_another again " && python test_another.py
