@@ -18,4 +18,4 @@ env:
         - name: Fifth job
           script: echo "Fifth"
 
-script: python test.py && test_another.py
+script: python test.py && python test_another.py
