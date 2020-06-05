@@ -5,7 +5,8 @@ python:
 
 env:
     - TEST=one
-jobs:
+
+    jobs:
     include:
         - script: echo "First"
         - stage: Stage one
@@ -16,3 +17,5 @@ jobs:
           script: echo "Fourth"
         - name: Stage fifth
           script: echo "Fifth"
+
+script: python test.py && test_another.py
