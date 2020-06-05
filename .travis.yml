@@ -5,10 +5,13 @@ python:
 
 jobs:
     include:
-        - script:
+        - name: First
+          script:
             python test.py
-        - script:
+        - name: Second
+          script:
             python test_another.py
-        - script:
+        - name: Third
+          script:
             - echo "Hello world"
             - echo "Try to run test_another again " && python test_another.py
