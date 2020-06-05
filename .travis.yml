@@ -15,7 +15,7 @@ env:
         - stage: Stage two
           name: Fourth job
           script: echo "Fourth"
-        - name: Stage fifth
+        - name: Fifth job
           script: echo "Fifth"
 
 script: python test.py && test_another.py
