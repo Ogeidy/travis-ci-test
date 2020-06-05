@@ -6,7 +6,7 @@ python:
 env:
     - TEST=one
 
-    jobs:
+jobs:
     include:
         - script: echo "First"
         - stage: Stage one
